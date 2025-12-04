@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Service layer for generating monthly expense reports.
+ */
 @Service
 public class ReportService {
 
@@ -27,6 +30,7 @@ public class ReportService {
 
     /**
      * Generate a monthly report for a given user and period.
+     *
      * @param userId the ID of the user
      * @param period the YearMonth period (e.g., 2025-12)
      * @return ReportDTO with totals and category breakdown
@@ -62,4 +66,3 @@ public class ReportService {
         return new ReportDTO(period, total, byCategory);
     }
 }
-

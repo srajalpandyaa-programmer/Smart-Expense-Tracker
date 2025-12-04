@@ -1,6 +1,6 @@
 package com.ind.SmartExpenseTracker.controller;
 
-import com.ind.SmartExpenseTracker.dto.ExpenseRequest;
+
 import com.ind.SmartExpenseTracker.dto.ExpenseDTO;
 import com.ind.SmartExpenseTracker.service.ExpenseService;
 import jakarta.validation.Valid;
@@ -17,7 +17,7 @@ public class ExpenseController {
     public ExpenseController(ExpenseService service) { this.service = service; }
 
     @PostMapping
-    public ResponseEntity<ExpenseDTO> add(@Valid @RequestBody ExpenseRequest req, Authentication auth) {
+    public ResponseEntity<ExpenseDTO> add(@Valid @RequestBody ExpenseDTO req, Authentication auth) {
         String userId = (String) auth.getPrincipal();
         return ResponseEntity.ok(service.addExpense(userId, req));
     }
