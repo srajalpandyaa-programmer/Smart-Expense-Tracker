@@ -1,8 +1,6 @@
 package com.ind.SmartExpenseTracker.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import jakarta.validation.constraints.NotBlank;
 
@@ -11,6 +9,8 @@ import jakarta.validation.constraints.NotBlank;
  * when a user attempts to log in.
  */
 @Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class LoginRequestDTO {
